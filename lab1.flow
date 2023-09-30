@@ -1,0 +1,14 @@
+import string;
+
+strArrToStr(strArr: [string]) -> string {
+    strGlue(strArr, ", ");
+}
+
+intArrToStrArr(intArr: [int]) -> [string] {
+    map(intArr, \i -> i2s(i));
+}
+
+main () {
+    intArr = [1, 2, 3];
+    println(strArrToStr(intArrToStrArr(intArr)));
+}
